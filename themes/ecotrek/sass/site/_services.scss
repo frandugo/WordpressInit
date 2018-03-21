@@ -1,0 +1,113 @@
+.services-content{
+	.service{
+		background-size: cover; 
+		display: block;
+		padding: 120px 0;
+		position: relative;
+		&:before{
+			background: #F8CD1B;
+			bottom: 15%;
+			content: '';
+			height: 4px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			position: absolute;
+			transition: 0.3s all;
+			width: 0px;
+			z-index: 2;
+		}
+		h2{
+			color: #FFF;
+			font-family: 'Abril Fatface', cursive;
+			font-weight: 100;
+			font-size: 36px;
+			position: relative;
+			margin: 0;
+			z-index: 2;
+		}
+		.text{	
+			font-size: 0;
+			position: relative;
+			opacity: 0;
+			transition: 0.2s all; 
+			z-index: 2;
+			p{
+				color: #FFF;
+				font-weight: 300;
+				font-size: 14px;
+				display: inline-block;
+				vertical-align: middle;
+				width: 80%;
+			}
+			.actions{
+				display: inline-block;
+				text-align: center;
+				vertical-align: middle;
+				width: 20%;
+				a{ transition: 0.2s all; }
+			}
+		}	
+		&.dark{
+			&:after{
+				background-color: rgba(0,0,0,0.5);
+				content: '';
+				height: 100%;
+				left: 0;
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				transition: 0.2s all;
+				width: 100%;
+				z-index: 1;
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+		&.green{
+			&:after{
+				background: rgba(244,208,63,0.5); /* Old browsers */
+				background: linear-gradient(135deg, rgba(244,208,63,0.7) 0%,rgba(22,160,133,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4d03f', endColorstr='#16a085',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+				content: '';
+				height: 100%;
+				left: 0;
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				transition: 0.2s all;
+				width: 100%;
+				z-index: 1;
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+		&:hover{
+			&:before{ width: 130px; }
+			.text{
+				opacity: 1;
+				.actions{
+					a{  margin-bottom: 20px; }
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 768px){
+	.services-content .service{ 
+		padding: 80px 0;
+		&:before{ bottom: 5%; }
+	}
+	.services-content .service h2{ text-align: center; }
+	.services-content .service .text .actions{ width: 100%; }
+	.services-content .service .text p{ 
+		text-align: center;
+		width: 100%; 
+	}
+}

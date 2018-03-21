@@ -1,0 +1,175 @@
+.contact-location{
+	background: #F8F8F8;
+	position: relative;
+	.map{
+		height: 700px;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		width: 960px;
+		img{
+			width: 100%;
+		}
+	}	
+}
+.content-info-location{
+	right: 7%;
+	position: absolute;
+	top: 30%;
+	.info-location{
+		width: 200px;
+		position: relative;
+		&:after{
+			background: #5C320D;
+			content: '';
+			height: 1px;
+			position: absolute;
+			right: 70%;
+			top: 18%;
+			width: 240px;
+		}
+		h4{
+			font-size: 12px;
+			color: #5C320D;
+			text-transform: uppercase;
+		}
+		p{
+			font-size: 12px;
+			color: #5C320D;
+		}
+		.marker{
+			background: url('images/bin/marker.png')no-repeat;
+			position: absolute;
+			height: 36px;
+			left: -110%;
+			top: 5%;
+			width: 31px;
+		}
+	}
+}
+.wpcf7{ 
+	height: 460px; 
+	position: relative;
+}
+.contact-form{
+	background: #F1F1F1;
+	border: 3px solid #ECF81C;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	top: -20%;
+	width: 50%;
+	input{ width: 100%; }
+	fieldset{
+		br{ display: none; }
+		textarea{ 
+			background: #D8D8D8;
+			border: none;
+			padding: 10px;
+			resize: none;
+			width: 100%; 
+		}
+		input{
+			background: #D8D8D8;
+			border: none;
+			padding: 10px;
+		}
+		.your-email{
+			input[type="email"]{
+				display: inline-block;
+				width: 49%;
+			}
+		}	
+		.your-subject{
+			input[type="text"]{
+				display: inline-block;
+				width: 49%;
+			}
+		}	
+	}
+	input[type="submit"]{
+		display: inline-block;
+		line-height: 45px;
+		width: auto;
+	}
+	p{
+		margin: 10px 0px 20px;
+	}
+}
+.wpcf7-response-output{
+	position: absolute;
+	bottom: -10%;
+	left: 0;
+	margin: 0 auto !important;
+	right: 0;
+	text-align: center;
+	width: 60%;
+	z-index: 4;
+}
+.wpcf7-not-valid-tip{
+	color: #5c320d !important;
+}
+@media only screen and (max-width: 768px){
+	.contact-location .map{ width: 768px; }
+	.content-info-location{
+		right: -4%;
+		top: 22%;
+	}
+	.contact-form{ width: 100%; }
+}
+@media only screen and (max-width: 480px){
+	.contact-location .map{ 
+		height: 500px; 
+		width: 100%;
+	}
+	.content-info-location{
+		top: 14%;
+		width: 100%;
+	}
+	.content-info-location .info-location{
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+		width: 200px;
+	}
+	.content-info-location .info-location:after{ display: none; }
+	.contact-location .map{ width: 480px; }
+	.content-info-location .info-location .marker{
+		left: 36%;
+    	top: -3%;
+	}
+	.contact-form fieldset .your-email input[type=email]{ 
+		margin-bottom: 15px;
+		width: 100%; 
+	}
+	.contact-form fieldset .your-subject input[type=text]{ width: 100%; }
+	.wpcf7-response-output{
+		bottom: -1%;
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 320px){
+	.contact-location .map{
+		height: 350px;
+		width: 100%;
+	}
+	.content-info-location{
+		top: 14%;
+		width: 100%;
+	}
+	.content-info-location .info-location{
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+		width: 200px;
+	}
+	.content-info-location .info-location:after{ display: none; }
+	.contact-location .map{ width: 320px; }
+	.content-info-location .info-location .marker{
+		left: 36%;
+    	top: -15%;
+	}
+}

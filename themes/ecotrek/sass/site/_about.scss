@@ -1,0 +1,111 @@
+.about{
+	.about-text{
+		background: #00357F;
+		padding: 40px 0;
+		text-align: center;
+		width: 100%;
+		p{
+			color: #FFF;
+			font-family: 'Abril Fatface', cursive;
+			font-weight: 100;
+			font-size: 36px;
+		}
+	}
+	.video{
+		background: #ccc;
+		height: 630px;
+		width: 100%;
+		iframe{
+			height: 630px;
+			width: 100%;
+		}
+	}
+}
+.about-columns{
+	font-size: 0;
+	position: absolute;
+	top: 2%;
+	width: 100%;
+	.about-column{
+		display: inline-block;
+		margin-right: 2.3%;
+		position: relative;
+		vertical-align: top;
+		width: 31%;
+		&:after{
+			content: '';
+			bottom: -5%;
+			background: #FFF;
+			height: 4px;
+			left: 0;
+			margin: 0 auto;
+			right: 0;
+			position: absolute;
+			width: 120px;
+		}
+		p{
+			color: #FFF;
+			font-weight: 300;
+			font-size: 14px;
+		}
+	}
+}
+
+@media only screen and (max-width: 960px){
+	.about .about-text p{ font-size: 30px; }
+	.about-footer .partners-foot{ top: 50%; }
+	.about-footer{ background-position: center 100%; }
+}
+@media only screen and (max-width: 768px){
+	.about .about-text p{ font-size: 25px; }
+	.about-footer{
+		height: 1850px;
+		&:after{
+			height: 600px !important;
+		}
+		.partners-foot{ top: auto; bottom: 26%; }
+		.footer-info{ bottom: 13%; }
+		.joonik{ bottom: 1.5%; }
+	}
+
+	.about-columns .about-column{ 
+		margin: 0;
+		width: 100%; 
+		&:after{
+			bottom: 0%;
+			height: 1px;
+			width: 100%;
+		}
+		br{ display: none; }
+	}
+	.video{
+		height: 430px;
+		iframe{
+			height: 430px;
+		}
+	}
+}
+@media only screen and (max-width: 480px){
+	.about-footer{
+		height: 1750px;
+		&:after{
+			height: 550px !important;
+		}
+		.partners-foot{ top: auto; bottom: 20%; }
+		.footer-info{ bottom: 13%; }
+		.joonik{ bottom: 1.5%; }
+	}
+	.about .video{ height: 300px; }
+	.about .video iframe{ height: 300px; }
+}
+@media only screen and (max-width: 480px){
+	.about-footer{
+		height: 2000px;
+		&:after{
+			height: 550px !important;
+		}
+		.partners-foot{ top: auto; bottom: 20%; }
+		.footer-info{ bottom: 10%; }
+		.joonik{ bottom: 1.5%; }
+	}
+}

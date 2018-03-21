@@ -1,0 +1,150 @@
+.service-detail{
+	padding: 40px 0;
+	overflow: hidden;
+	.slider-services-detail{
+		float: left;
+		vertical-align: top;
+		width: 577px;
+		.slick-prev {
+		    left: 5%;
+		    top: 45%;
+		    &:after {
+		        right: 0%;
+	        	top: 50%;
+	        	border: solid transparent;
+	        	content: " ";
+	        	height: 0;
+	        	width: 0;
+	        	position: absolute;
+	        	pointer-events: none;
+	        	border-color: rgba(255, 255, 255, 0);
+	        	border-right-color: #ffffff;
+	        	border-width: 15px;
+	        	margin-top: -15px;
+		    }
+		}
+		.slick-next {
+		    right: 5%;
+		    top: 45%;
+		    &:after {
+		        left: 0%;
+	        	top: 50%;
+	        	border: solid transparent;
+	        	content: " ";
+	        	height: 0;
+	        	width: 0;
+	        	position: absolute;
+	        	pointer-events: none;
+	        	border-color: rgba(255, 255, 255, 0);
+	        	border-left-color: #ffffff;
+	        	border-width: 15px;
+	        	margin-top: -15px;
+		    }
+		}
+		.slick-arrow {
+		    border: none;
+		    background: 0 0;
+		    position: absolute;
+		    text-indent: -999999px;
+		    width: 20px;
+		    z-index: 9999;
+		}
+	}
+	.service-detail-info{
+		float: right;
+		padding: 0 20px;
+		vertical-align: top;
+		width: 50%;
+		h2{
+			color: #573312;
+			font-weight: 500;
+			font-size: 36px;
+			margin: 0;
+		}
+		p{
+			color: #573312;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 28px;
+			padding-bottom: 40px;
+			position: relative;
+			&:after{
+				background: #F8CD1B;
+				bottom: 10px;
+				content: '';
+				height: 6px;
+				left: 0;
+				position: absolute;
+				width: 70px;
+			}
+		}
+	}
+	&.right{
+		.slider-services-detail{
+			float: right;
+		}
+		.service-detail-info{
+			float: left;
+		}
+	}
+}
+.filter-service{
+	background: #f7f7f7;
+	padding: 40px 0;
+	input[type="text"]{
+		padding: 10px;
+		width: 24%;
+	}
+	a{
+		padding: 13.5px 20px !important;
+		width: 25%;
+	}
+}
+/* Datepicker */
+
+.ui-widget-header{
+	background: #99C849;
+	border: #99C849;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+	background: #A3C665;
+	border: #A3C665;
+	color: #FFF;
+}
+.ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	color: #333;
+}
+.ui-state-hover, .ui-datepicker-next-hover{
+	background: #6BA304 !important;
+	border: none !important;
+	color: #FFF !important;
+}
+
+@media only screen and (max-width: 1201px){
+	.service-detail .slider-services-detail{ width: 500px; }
+	.service-detail .service-detail-info{ width: 45%; }
+	.service-detail .service-detail-info p{ line-height: 24px; }
+}
+@media only screen and (max-width: 960px){
+	.service-detail .slider-services-detail{ 
+		margin: 0 auto 40px;
+		width: 100%; 
+	}
+	.service-detail .service-detail-info{
+		padding: 0;
+		width: 100%;
+	}
+	.service-detail .slick-slide img { width: 100%; }
+}
+@media only screen and (max-width: 480px){
+	.filter-service{
+		input[type="text"]{
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 32.5%;
+		}
+		a{
+			width: 100%;
+		}
+	}
+}
